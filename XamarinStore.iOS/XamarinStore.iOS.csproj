@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XamarinStore</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>XamarinStoreiOS</AssemblyName>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <DefineConstants>__IOS__</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: Xamarin Inc</CodesignKey>
+    <DefineConstants>__IOS__</DefineConstants>
+    <BuildIpa>true</BuildIpa>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignProvision>Automatic:InHouse</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>6B25DC76-E75A-4012-B066-B71F57CB7D4A</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <DefineConstants>__IOS__</DefineConstants>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <DefineConstants>__IOS__</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AppStore|iPhoneSimulator'">
+    <DefineConstants>__IOS__</DefineConstants>
+    <OutputPath>bin\AppStore</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="TestFlight">
+      <HintPath>lib\TestFlight.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\json.net-4.5.11\lib\ios\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.7\lib\ios\BTProgressHUD.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="..\Shared\Models\Product.cs">
+      <Link>Shared\Models\Product.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\Order.cs">
+      <Link>Shared\Models\Order.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\User.cs">
+      <Link>Shared\Models\User.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\SSO\UserModels.cs">
+      <Link>Shared\SSO\UserModels.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\SSO\XamarinSSOClient.cs">
+      <Link>Shared\SSO\XamarinSSOClient.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\WebService.cs">
+      <Link>Shared\Data\WebService.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\EventArgs.cs">
+      <Link>Shared\Data\EventArgs.cs</Link>
+    </Compile>
+    <Compile Include="ViewControllers\LoginViewController.cs" />
+    <Compile Include="Views\BadgeView.cs" />
+    <Compile Include="Views\BasketButton.cs" />
+    <Compile Include="Views\JBKenBurnsView.cs" />
+    <Compile Include="Views\PrefillXamarinAccountInstructionsView.cs" />
+    <Compile Include="Views\LoginView.cs" />
+    <Compile Include="..\Shared\Data\Gravatar.cs">
+      <Link>Shared\Data\Gravatar.cs</Link>
+    </Compile>
+    <Compile Include="ViewControllers\ProductListViewController.cs" />
+    <Compile Include="ViewControllers\ShippingAddressViewController.cs" />
+    <Compile Include="Views\ProductDescriptionView.cs" />
+    <Compile Include="ViewControllers\BasketViewController.cs" />
+    <Compile Include="Views\EmptyBasketView.cs" />
+    <Compile Include="..\Shared\Models\OrderResult.cs">
+      <Link>Shared\Models\OrderResult.cs</Link>
+    </Compile>
+    <Compile Include="Views\ImageScroller.cs" />
+    <Compile Include="Views\BrightlyBlurredUIView.cs" />
+    <Compile Include="Views\StringUIPicker.cs" />
+    <Compile Include="Views\BottomButtonView.cs" />
+    <Compile Include="ViewControllers\ProductDetailViewController.cs" />
+    <Compile Include="Views\CustomViewCell.cs" />
+    <Compile Include="Views\StringSelectionCell.cs" />
+    <Compile Include="..\Shared\Models\ProductColor.cs">
+      <Link>Shared\Models\ProductColor.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\ProductSize.cs">
+      <Link>Shared\Models\ProductSize.cs</Link>
+    </Compile>
+    <Compile Include="ViewControllers\ProcessingViewController.cs" />
+    <Compile Include="Views\ImageButton.cs" />
+    <Compile Include="Views\TopAlignedImageView.cs" />
+    <Compile Include="..\Shared\Helpers\ListExtensions.cs">
+      <Link>Shared\Helpers\ListExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\Color.cs">
+      <Link>Shared\Data\Color.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\FileCache.cs">
+      <Link>Shared\Data\FileCache.cs</Link>
+    </Compile>
+    <Compile Include="Views\SpinnerCell.cs" />
+    <Compile Include="Views\UrlUIImage.cs" />
+    <Compile Include="Helpers\UIImageExtensions.cs" />
+    <Compile Include="..\Shared\Models\Country.cs">
+      <Link>Shared\Models\Country.cs</Link>
+    </Compile>
+    <Compile Include="Views\TextEntryView.cs" />
+    <Compile Include="Views\AutoCompleteTextEntry.cs" />
+    <Compile Include="Helpers\UIViewExtensions.cs" />
+    <Compile Include="ViewControllers\StringTableViewController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-50.png" />
+    <BundleResource Include="Resources\Icon-Small-50%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="..\Shared\Images\button-image.png">
+      <Link>Resources\button-image.png</Link>
+    </BundleResource>
+    <BundleResource Include="Resources\cart.png" />
+    <BundleResource Include="Resources\cart%402x.png" />
+    <BundleResource Include="Resources\empty-basket.png" />
+    <BundleResource Include="Resources\empty-basket%402x.png" />
+    <BundleResource Include="Resources\fill-details-instructions-mockup.png" />
+    <BundleResource Include="Resources\fill-details-instructions-mockup%402x.png" />
+    <BundleResource Include="Resources\monkey.png" />
+    <BundleResource Include="Resources\monkey%402x.png" />
+    <BundleResource Include="Resources\user-default-avatar.png" />
+    <BundleResource Include="Resources\user-default-avatar%402x.png" />
+    <BundleResource Include="Resources\gear.png" />
+    <BundleResource Include="Resources\gear%402x.png" />
+    <BundleResource Include="Resources\success.png" />
+    <BundleResource Include="Resources\success%402x.png" />
+    <BundleResource Include="Resources\twitter.png" />
+    <BundleResource Include="Resources\twitter%402x.png" />
+    <BundleResource Include="Resources\shirt_image.png" />
+    <BundleResource Include="Resources\t-shirt.png" />
+    <BundleResource Include="Resources\t-shirt%402x.png" />
+    <BundleResource Include="Resources\circle.png" />
+    <BundleResource Include="Resources\circle%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.7</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Shared\Helpers\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:text="Shipping information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:id="@+id/scrollView1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp">
+            <EditText
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Phone"
+                android:hint="Phone number"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+            <EditText
+                android:inputType="textPostalAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Street Address 1"
+                android:id="@+id/StreetAddress1"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+            <EditText
+                android:inputType="textPostalAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Street Address 2"
+                android:id="@+id/StreetAddress2"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+            <EditText
+                android:inputType="textPostalAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:id="@+id/City"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Postal Code"
+                android:id="@+id/PostalCode"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Country"
+                android:hint="Country"
+                android:imeOptions="actionNext"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/State"
+                android:hint="State"
+                android:imeOptions="actionDone"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp" />
+            <Button
+                style="@style/XamButton"
+                android:text="Place Order"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/PlaceOrder"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

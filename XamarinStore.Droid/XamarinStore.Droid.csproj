@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E96837AE-F19A-4467-AE2D-2C4FDCD8A0F3}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>XamarinStore</RootNamespace>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AssemblyName>XamarinStore</AssemblyName>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="TestFlightBindings">
+      <HintPath>lib\TestFlightBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Fragments\ProductDetailsFragment.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Fragments\ShippingDetailsFragment.cs" />
+    <Compile Include="Fragments\ProductListFragment.cs" />
+    <Compile Include="Fragments\BasketFragment.cs" />
+    <Compile Include="..\Shared\Data\EventArgs.cs">
+      <Link>Shared\Data\EventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\Gravatar.cs">
+      <Link>Shared\Data\Gravatar.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\WebService.cs">
+      <Link>Shared\Data\WebService.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\Order.cs">
+      <Link>Shared\Models\Order.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\OrderResult.cs">
+      <Link>Shared\Models\OrderResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\Product.cs">
+      <Link>Shared\Models\Product.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\User.cs">
+      <Link>Shared\Models\User.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\SSO\UserModels.cs">
+      <Link>Shared\SSO\UserModels.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\SSO\XamarinSSOClient.cs">
+      <Link>Shared\SSO\XamarinSSOClient.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\ProductColor.cs">
+      <Link>Shared\Models\ProductColor.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\ProductSize.cs">
+      <Link>Shared\Models\ProductSize.cs</Link>
+    </Compile>
+    <Compile Include="Fragments\LoginFragment.cs" />
+    <Compile Include="Helpers\Images.cs" />
+    <Compile Include="Views\XamarinSpinnerView.cs" />
+    <Compile Include="Views\BadgeDrawable.cs" />
+    <Compile Include="Views\SlidingLayout.cs" />
+    <Compile Include="Views\ViewSwipeTouchListener.cs" />
+    <Compile Include="Views\SwipableListItem.cs" />
+    <Compile Include="..\Shared\Helpers\ListExtensions.cs">
+      <Link>Shared\Helpers\ListExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Data\FileCache.cs">
+      <Link>Shared\Data\FileCache.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Models\Country.cs">
+      <Link>Shared\Models\Country.cs</Link>
+    </Compile>
+    <Compile Include="App.cs" />
+    <Compile Include="..\Shared\Data\Color.cs">
+      <Link>Shared\Data\Color.cs</Link>
+    </Compile>
+    <Compile Include="Views\KenBurnsDrawable.cs" />
+    <Compile Include="Helpers\MatrixEvaluator.cs" />
+    <Compile Include="Fragments\BragFragment.cs" />
+    <Compile Include="Views\CircleDrawable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\layout\ShippingDetails.axml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\values\themes.xml" />
+    <AndroidResource Include="Resources\layout\BasketItem.axml" />
+    <AndroidResource Include="Resources\layout\Basket.axml" />
+    <AndroidResource Include="Resources\layout\ProductDetail.axml" />
+    <AndroidResource Include="Resources\layout\ProductListItem.axml" />
+    <AndroidResource Include="Resources\drawable\discrete_shadow.xml" />
+    <AndroidResource Include="Resources\drawable\ab_background.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\blue_shirt.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\ProductImage.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\purple_shirt.png" />
+    <AndroidResource Include="Resources\menu\menu.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\layout\PrefillXamarinAccountInstructions.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\wrench.png" />
+    <AndroidResource Include="Resources\layout\LoginScreen.axml" />
+    <AndroidResource Include="..\Shared\Images\button-image.png">
+      <Link>Resources\drawable\buttonimage.png</Link>
+    </AndroidResource>
+    <AndroidResource Include="Resources\anim\enter.xml" />
+    <AndroidResource Include="Resources\anim\exit.xml" />
+    <AndroidResource Include="Resources\drawable\wrench.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cart.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\cart.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\cart.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\user_default_avatar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\user_default_avatar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\user_default_avatar.png" />
+    <AndroidResource Include="Resources\anim\product_detail_in.xml" />
+    <AndroidResource Include="Resources\anim\product_detail_out.xml" />
+    <AndroidResource Include="Resources\anim\basket_in.xml" />
+    <AndroidResource Include="Resources\layout\XamarinListLayout.axml" />
+    <AndroidResource Include="Resources\drawable-nodpi\monkey.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\shirt_image.png" />
+    <AndroidResource Include="Resources\anim\add_to_basket_in.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\complete.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\configure.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\processing.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\complete.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\configure.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\processing.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\complete.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\configure.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\processing.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\complete.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\configure.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\processing.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_basket.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_basket.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_basket.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_basket.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dummy_avatar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\empty_basket.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gallery_next.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gallery_prev.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\dummy_avatar.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\empty_basket.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gallery_next.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gallery_prev.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\dummy_avatar.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\empty_basket.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gallery_next.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gallery_prev.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\empty_basket.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\dummy_avatar.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gallery_next.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gallery_prev.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\cart.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\empty_basket.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\user_default_avatar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_logo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_logo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_logo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_logo.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_logo.png" />
+    <AndroidResource Include="Resources\layout\BragScreen.axml" />
+    <AndroidResource Include="Resources\drawable\btn_bg_normal.xml" />
+    <AndroidResource Include="Resources\drawable\btn_bg.xml" />
+    <AndroidResource Include="Resources\drawable\btn_bg_inactive.xml" />
+    <AndroidResource Include="Resources\drawable\btn_bg_pressed.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\anim\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-nodpi\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Views\" />
+    <Folder Include="Shared\Helpers\" />
+    <Folder Include="Resources\drawable-ldpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy FileWidth="120" TabsToSpaces="False" inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/plain" />
+          <TextStylePolicy inheritsSet="null" scope="application/xml" />
+          <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xml" />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

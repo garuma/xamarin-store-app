@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xamarinstore.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:src="@color/xam_dark_blue"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:id="@+id/productImage" />
+    <LinearLayout
+        android:id="@+id/descriptionLayout"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:text="Men's C# t-shirt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/productTitle"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:gravity="bottom"
+                android:textColor="@color/xam_purple" />
+            <TextView
+                android:text="Free"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/productPrice"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/xam_blue"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:gravity="bottom" />
+        </LinearLayout>
+        <TextView
+            android:text="Flaunt your C# pride in this svelte American Apparel t-shirt, and everyone around you will think LINQ stands for &quot;Lads in Nice Qlothing&quot;"
+            android:id="@+id/productDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/xam_gray"
+            android:layout_marginBottom="8dp" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1"
+            android:stretchColumns="1"
+            android:layout_marginBottom="8dp">
+            <TableRow>
+                <TextView
+                    android:text="Size"
+                    android:id="@+id/textView4"
+                    android:textAllCaps="true"
+                    android:layout_column="0"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center"
+                    android:layout_marginRight="4dp" />
+                <Spinner
+                    android:id="@+id/productSize"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Color"
+                    android:id="@+id/textView4"
+                    android:textAllCaps="true"
+                    android:layout_column="0"
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="center"
+                    android:layout_marginRight="4dp" />
+                <Spinner
+                    android:id="@+id/productColor"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp" />
+            </TableRow>
+        </TableLayout>
+        <Button
+            style="@style/XamButton"
+            android:text="Add to Basket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:id="@+id/addToBasket" />
+    </LinearLayout>
+</xamarinstore.SlidingLayout>
