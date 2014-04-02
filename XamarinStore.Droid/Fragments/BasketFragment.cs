@@ -98,14 +98,14 @@ namespace XamarinStore
 
 			View view = convertView; // re-use an existing view, if one is available
 			if (view == null) { // otherwise create a new one
-				view = context
-					.GetSystemService (Context.LayoutInflaterService)
-					.JavaCast<LayoutInflater> ()
-					.Inflate (Resource.Layout.BasketItem, parent, false);
+				view = LayoutInflater.From (context).Inflate (Resource.Layout.BasketItem, parent, false);
 				var swipper = ((SwipableListItem)view).SwipeListener;
 				swipper.SwipeGestureBegin += (sender, e) => ((ListView)parent).RequestDisallowInterceptTouchEvent (true);
 				swipper.SwipeGestureEnd += (sender, e) => ((ListView)parent).RequestDisallowInterceptTouchEvent (false);
 				swipper.ItemSwipped += (sender, e) => {
+					// If view has already been processed, do nothing
+					if (view.Parent == null)
+						return;
 					var p = ((ListView)parent).GetPositionForView (view);
 					var order = WebService.Shared.CurrentOrder;
 					order.Remove (order.Products [p]);

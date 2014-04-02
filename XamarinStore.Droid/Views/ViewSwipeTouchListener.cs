@@ -63,14 +63,17 @@ namespace XamarinStore
 				return;
 			var targetAlpha = dismiss ? 0 : 1;
 			var targetTranslation = dismiss ? targetView.Width : 0;
-			var a = targetView.Animate ()
-				.Alpha (targetAlpha)
-				.TranslationX (targetTranslation);
+			var a = ObjectAnimator.OfPropertyValuesHolder (
+				targetView,
+				PropertyValuesHolder.OfFloat ("alpha", targetView.Alpha, targetAlpha),
+				PropertyValuesHolder.OfFloat ("translationX", targetView.TranslationX, targetTranslation)
+			);
 			if (dismiss) {
-				a.WithEndAction (new Runnable (() => {
+				a.AnimationEnd += (sender, e) => {
+					((ValueAnimator)sender).RemoveAllListeners ();
 					if (ItemSwipped != null)
 						ItemSwipped (this, EventArgs.Empty);
-				}));
+				};
 			}
 			a.Start ();
 		}
