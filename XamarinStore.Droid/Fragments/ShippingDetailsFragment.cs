@@ -64,9 +64,11 @@ namespace XamarinStore
 			};
 
 			placeOrder.Click += async (sender, e) => {
-				//Hide Keyboard
-				var imm = (InputMethodManager)Activity.GetSystemService (Activity.InputMethodService);
-				imm.HideSoftInputFromWindow(phone.WindowToken,0);
+				var entries = new EditText[] {
+					phone, streetAddress1, streetAddress2, city, state, postalCode, country
+				};
+				foreach (var entry in entries)
+					entry.Enabled = false;
 
 				user.Phone = phone.Text;
 				user.Address = streetAddress1.Text;
@@ -75,7 +77,9 @@ namespace XamarinStore
 				user.State = state.Text;
 				user.ZipCode = postalCode.Text;
 				user.Country = await WebService.Shared.GetCountryCode(country.Text);
-				ProcessOrder();
+				await ProcessOrder();
+				foreach (var entry in entries)
+					entry.Enabled = true;
 			};
 			LoadCountries ();
 			LoadStates ();
@@ -94,7 +98,7 @@ namespace XamarinStore
 			state.Adapter = new ArrayAdapter(this.Activity, Android.Resource.Layout.SimpleDropDownItem1Line, states);
 		}
 
-		async void ProcessOrder ()
+		async System.Threading.Tasks.Task ProcessOrder ()
 		{	
 			var isValid = user.IsInformationValid ();
 			if (!isValid.Item1) {
