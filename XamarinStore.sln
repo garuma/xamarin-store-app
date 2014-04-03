@@ -105,7 +105,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = XamarinStore.Droid\XamarinStore.Droid.csproj
+		StartupItem = XamarinStore.iOS\XamarinStore.iOS.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None
