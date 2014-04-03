@@ -11,6 +11,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Android.Views.InputMethods;
+using System.Threading.Tasks;
 
 namespace XamarinStore
 {
@@ -98,9 +99,9 @@ namespace XamarinStore
 			state.Adapter = new ArrayAdapter(this.Activity, Android.Resource.Layout.SimpleDropDownItem1Line, states);
 		}
 
-		async System.Threading.Tasks.Task ProcessOrder ()
+		async Task ProcessOrder ()
 		{	
-			var isValid = user.IsInformationValid ();
+			var isValid = await user.IsInformationValid ();
 			if (!isValid.Item1) {
 				Toast.MakeText (Activity, isValid.Item2, ToastLength.Long).Show ();
 				return;

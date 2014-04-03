@@ -96,7 +96,7 @@ namespace XamarinStore
 			user.Phone = PhoneNumberField.Value;
 			user.State = StateField.Value;
 			user.ZipCode = PostalField.Value;
-			var isValid = user.IsInformationValid ();
+			var isValid = await user.IsInformationValid ();
 			if (!isValid.Item1) {
 
 				new UIAlertView ("Error", isValid.Item2, null, "Ok").Show ();

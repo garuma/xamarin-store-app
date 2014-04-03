@@ -115,6 +115,14 @@ namespace XamarinStore
 
 			return c.Code;
 		}
+
+		public async Task<string> GetCountryFromCode(string code)
+		{
+			var c = (await GetCountries ()).FirstOrDefault (x => x.Code == code) ?? new Country();
+
+			return c.Name;
+		}
+
 		//No need to await anything, and no need to spawn a task to return a list.
 		#pragma warning disable 1998
 		public  async Task<List<string>> GetStates(string country)

@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace XamarinStore
 {
@@ -31,7 +32,7 @@ namespace XamarinStore
 
 		public string ZipCode { get; set; }
 
-		public Tuple<bool,string> IsInformationValid()
+		public async Task<Tuple<bool,string>> IsInformationValid()
 		{
 
 			if (string.IsNullOrEmpty (Phone))
@@ -49,8 +50,11 @@ namespace XamarinStore
 			if (string.IsNullOrEmpty (City))
 				return new Tuple<bool, string>(false,"City is required");
 
-			if (string.IsNullOrEmpty (State) && Country.ToLower () == "united states")
-				return new Tuple<bool, string>(false,"State is required");
+			if (Country.ToLower () == "usa") {
+				var states = await WebService.Shared.GetStates (await WebService.Shared.GetCountryFromCode(Country));
+				if(!states.Contains(State))
+					return new Tuple<bool, string> (false, "State is required");
+			}
 
 			if (string.IsNullOrEmpty (Country))
 				return new Tuple<bool, string>(false,"Country is required");
