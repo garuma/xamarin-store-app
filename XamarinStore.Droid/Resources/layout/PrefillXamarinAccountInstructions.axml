@@ -23,7 +23,7 @@
     <TextView
         style="@style/XamSubtitleText"
         android:id="@+id/explanationTextView"
-        android:text="A small task is required to get your free shirt.\nPlease add your Xamarin account email address to XamarinAccout.cs then revisit this screen."
+        android:text="A small task is required to get your free shirt.\nPlease add your Xamarin account email address to LoginFragment.cs then revisit this screen."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center" />
