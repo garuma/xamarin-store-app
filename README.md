@@ -25,5 +25,4 @@ This mobile app is brought to you by your friends at [Xamarin](http://xamarin.co
 - Seth Rosetter <seth.rosetter@xamarin.com>
 - Zack Gramana <zack@xamarin.com>
 - Valentin Polushkin <valentin.polushkin@xamarin.com>
-- JÃ©rÃ©mie Laval <jeremie.laval@xamarin.com>
-    
+- Jérémie Laval <jeremie.laval@xamarin.com>
