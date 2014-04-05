@@ -38,13 +38,11 @@ namespace XamarinStore
 			Cells.Add (new CustomViewCell (FirstNameField = new TextEntryView {
 				PlaceHolder = "First Name",
 				Value = user.FirstName,
-				KeyboardType = UIKeyboardType.NumberPad,
 			}));
 
 			Cells.Add (new CustomViewCell (LastNameField = new TextEntryView {
 				PlaceHolder = "Last Name",
 				Value = user.LastName,
-				KeyboardType = UIKeyboardType.NumberPad,
 			}));
 
 			Cells.Add (new CustomViewCell (PhoneNumberField = new TextEntryView {
