@@ -42,6 +42,12 @@ namespace XamarinStore
 			var phone = shippingDetailsView.FindViewById<EditText> (Resource.Id.Phone);
 			phone.Text = user.Phone;
 
+			var firstName = shippingDetailsView.FindViewById<EditText> (Resource.Id.FirstName);
+			firstName.Text = user.FirstName;
+
+			var lastName = shippingDetailsView.FindViewById<EditText> (Resource.Id.LastName);
+			lastName.Text = user.LastName;
+
 			var streetAddress1 = shippingDetailsView.FindViewById<EditText> (Resource.Id.StreetAddress1);
 			streetAddress1.Text = user.Address;
 
@@ -70,7 +76,8 @@ namespace XamarinStore
 				};
 				foreach (var entry in entries)
 					entry.Enabled = false;
-
+				user.FirstName = firstName.Text;
+				user.LastName = lastName.Text;
 				user.Phone = phone.Text;
 				user.Address = streetAddress1.Text;
 				user.Address2 = streetAddress2.Text;

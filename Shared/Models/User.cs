@@ -35,6 +35,12 @@ namespace XamarinStore
 		public async Task<Tuple<bool,string>> IsInformationValid()
 		{
 
+			if (string.IsNullOrEmpty (FirstName))
+				return new Tuple<bool, string>(false,"First name is required");
+
+			if (string.IsNullOrEmpty (LastName))
+				return new Tuple<bool, string>(false,"Last name is required");
+
 			if (string.IsNullOrEmpty (Phone))
 				return new Tuple<bool, string>(false,"Phone number is required");
 

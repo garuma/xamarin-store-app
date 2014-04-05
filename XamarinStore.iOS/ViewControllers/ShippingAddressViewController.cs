@@ -14,6 +14,8 @@ namespace XamarinStore
 
 		public event EventHandler ShippingComplete;
 
+		public readonly TextEntryView FirstNameField;
+		public readonly TextEntryView LastNameField;
 		public readonly TextEntryView PhoneNumberField;
 		public readonly TextEntryView AddressField;
 		public readonly TextEntryView Address2Field;
@@ -31,6 +33,19 @@ namespace XamarinStore
 			this.NavigationItem.BackBarButtonItem = new UIBarButtonItem ("", UIBarButtonItemStyle.Plain, handler: null);
 			this.user = user;
 			TableView.SeparatorStyle = UITableViewCellSeparatorStyle.None;
+
+
+			Cells.Add (new CustomViewCell (FirstNameField = new TextEntryView {
+				PlaceHolder = "First Name",
+				Value = user.FirstName,
+				KeyboardType = UIKeyboardType.NumberPad,
+			}));
+
+			Cells.Add (new CustomViewCell (PhoneNumberField = new TextEntryView {
+				PlaceHolder = "Last Name",
+				Value = user.LastName,
+				KeyboardType = UIKeyboardType.NumberPad,
+			}));
 
 			Cells.Add (new CustomViewCell (PhoneNumberField = new TextEntryView {
 				PlaceHolder = "Phone Number",
@@ -89,6 +104,8 @@ namespace XamarinStore
 
 		public async void PlaceOrder()
 		{
+			user.FirstName = FirstNameField.Value;
+			user.LastName = LastNameField.Value;
 			user.Address = AddressField.Value;
 			user.Address2 = Address2Field.Value;
 			user.City = CityField.Value;

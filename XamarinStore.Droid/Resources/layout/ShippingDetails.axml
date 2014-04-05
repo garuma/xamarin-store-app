@@ -24,6 +24,18 @@
             android:paddingRight="16dp"
             android:paddingLeft="16dp">
             <EditText
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/FirstName"
+                android:hint="First Name" />
+            <EditText
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/LastName"
+                android:hint="Last Name" />
+            <EditText
                 android:inputType="phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
