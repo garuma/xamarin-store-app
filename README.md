@@ -3,14 +3,14 @@ Run a C# app, get a C# shirt
 
 Get a snazzy shirt from the Xamarin Store App in just three simple steps, for free!
 
-1. __Install Xamarin__ - If you haven't already, [download Xamarin](xamarin.com/download).
+1. __Install Xamarin__ - If you haven't already, [download Xamarin](http://www.xamarin.com/download).
 2. __Grab the Xamarin Store app__ - Download from [here](https://github.com/xamarin/xamarin-store-app/archive/master.zip).
 3. __Run the app__ - Open the app in Xamarin Studio or Visual Studio and press Play.
 
 If you have any questions, give Xamarin a call at +1 (855) 926-2746 or email [hello@xamarin.com](mailto:hello@xamarin.com).
 
 
-This mobile app is brought to you by your friends at [Xamarin](http://xamarin.com/) on an evening hack night.
+This mobile app is brought to you by your friends at [Xamarin](http://www.xamarin.com/) on an evening hack night.
 
 ### Authors:
 - David Siegel <david@xamarin.com>
