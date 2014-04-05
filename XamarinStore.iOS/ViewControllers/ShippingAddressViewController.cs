@@ -41,7 +41,7 @@ namespace XamarinStore
 				KeyboardType = UIKeyboardType.NumberPad,
 			}));
 
-			Cells.Add (new CustomViewCell (PhoneNumberField = new TextEntryView {
+			Cells.Add (new CustomViewCell (LastNameField = new TextEntryView {
 				PlaceHolder = "Last Name",
 				Value = user.LastName,
 				KeyboardType = UIKeyboardType.NumberPad,
