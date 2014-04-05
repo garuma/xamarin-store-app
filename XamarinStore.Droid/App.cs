@@ -2,7 +2,6 @@
 using Android.App;
 using Android.Runtime;
 
-using TestFlight;
 
 namespace XamarinStore
 {
@@ -17,20 +16,7 @@ namespace XamarinStore
 		public override void OnCreate ()
 		{
 			base.OnCreate ();
-
-			TestFlight.TestFlight.TakeOff (this, "dfc77da6-f29c-4fff-acd6-59dc5ad774ab");
-			AndroidEnvironment.UnhandledExceptionRaiser += HandleUnhandledException;
 		}
 
-		void HandleUnhandledException (object sender, RaiseThrowableEventArgs e)
-		{
-			TestFlight.TestFlight.SendCrash (e.Exception);
-		}
-
-		protected override void Dispose (bool disposing)
-		{
-			AndroidEnvironment.UnhandledExceptionRaiser -= HandleUnhandledException;
-			base.Dispose (disposing);
-		}
 	}
 }
