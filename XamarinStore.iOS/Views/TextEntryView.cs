@@ -24,6 +24,12 @@ namespace XamarinStore
 			set{ textField.KeyboardType = value; }
 		}
 
+		public UITextAutocapitalizationType AutocapitalizationType
+		{
+			get { return textField.AutocapitalizationType; }
+			set { textField.AutocapitalizationType = value; }
+		}
+
 		public string PlaceHolder {
 			get {
 				return textField.Placeholder;
