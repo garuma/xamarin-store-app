@@ -54,20 +54,24 @@ namespace XamarinStore
 			Cells.Add (new CustomViewCell (AddressField = new TextEntryView {
 				PlaceHolder = "Address",
 				Value = user.Address,
+				AutocapitalizationType = UITextAutocapitalizationType.Words,
 			}));
 
 			Cells.Add (new CustomViewCell (Address2Field = new TextEntryView {
 				PlaceHolder = "Address",
 				Value = user.Address2,
+				AutocapitalizationType = UITextAutocapitalizationType.Words,
 			}));
 			Cells.Add (new CustomViewCell (CityField = new TextEntryView {
 				PlaceHolder = "City",
 				Value = user.City,
+				AutocapitalizationType = UITextAutocapitalizationType.Words,
 			}));
 
 			Cells.Add (new CustomViewCell (PostalField = new TextEntryView {
 				PlaceHolder = "Postal Code",
 				Value = user.ZipCode,
+				KeyboardType = UIKeyboardType.NumbersAndPunctuation,
 			}));
 
 			Cells.Add (new CustomViewCell (CountryField = new AutoCompleteTextEntry {
