@@ -243,9 +243,6 @@
     <BundleResource Include="Resources\Default.png" />
     <BundleResource Include="Resources\Default%402x.png" />
     <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="..\Shared\Images\button-image.png">
-      <Link>Resources\button-image.png</Link>
-    </BundleResource>
     <BundleResource Include="Resources\cart.png" />
     <BundleResource Include="Resources\cart%402x.png" />
     <BundleResource Include="Resources\empty-basket.png" />
@@ -278,8 +275,8 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Shared\Helpers\" />
-    <Folder Include="Helpers\" />
+    <BundleResource Include="Resources\button-image.png" />
   </ItemGroup>
 </Project>
