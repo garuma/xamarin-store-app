@@ -52,7 +52,7 @@ namespace XamarinStore
 			streetAddress1.Text = user.Address;
 
 			var streetAddress2 = shippingDetailsView.FindViewById<EditText> (Resource.Id.StreetAddress2);
-			streetAddress2.Text = user.Address;
+			streetAddress2.Text = user.Address2;
 
 			var city = shippingDetailsView.FindViewById<EditText> (Resource.Id.City);
 			city.Text = user.City;
