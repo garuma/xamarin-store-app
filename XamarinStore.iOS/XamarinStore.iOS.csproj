@@ -151,44 +151,17 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="..\Shared\Models\Product.cs">
-      <Link>Shared\Models\Product.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Models\Order.cs">
-      <Link>Shared\Models\Order.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Models\User.cs">
-      <Link>Shared\Models\User.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\SSO\UserModels.cs">
-      <Link>Shared\SSO\UserModels.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\SSO\XamarinSSOClient.cs">
-      <Link>Shared\SSO\XamarinSSOClient.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Data\WebService.cs">
-      <Link>Shared\Data\WebService.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Data\EventArgs.cs">
-      <Link>Shared\Data\EventArgs.cs</Link>
-    </Compile>
     <Compile Include="ViewControllers\LoginViewController.cs" />
     <Compile Include="Views\BadgeView.cs" />
     <Compile Include="Views\BasketButton.cs" />
     <Compile Include="Views\JBKenBurnsView.cs" />
     <Compile Include="Views\PrefillXamarinAccountInstructionsView.cs" />
     <Compile Include="Views\LoginView.cs" />
-    <Compile Include="..\Shared\Data\Gravatar.cs">
-      <Link>Shared\Data\Gravatar.cs</Link>
-    </Compile>
     <Compile Include="ViewControllers\ProductListViewController.cs" />
     <Compile Include="ViewControllers\ShippingAddressViewController.cs" />
     <Compile Include="Views\ProductDescriptionView.cs" />
     <Compile Include="ViewControllers\BasketViewController.cs" />
     <Compile Include="Views\EmptyBasketView.cs" />
-    <Compile Include="..\Shared\Models\OrderResult.cs">
-      <Link>Shared\Models\OrderResult.cs</Link>
-    </Compile>
     <Compile Include="Views\ImageScroller.cs" />
     <Compile Include="Views\BrightlyBlurredUIView.cs" />
     <Compile Include="Views\StringUIPicker.cs" />
@@ -196,35 +169,18 @@
     <Compile Include="ViewControllers\ProductDetailViewController.cs" />
     <Compile Include="Views\CustomViewCell.cs" />
     <Compile Include="Views\StringSelectionCell.cs" />
-    <Compile Include="..\Shared\Models\ProductColor.cs">
-      <Link>Shared\Models\ProductColor.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Models\ProductSize.cs">
-      <Link>Shared\Models\ProductSize.cs</Link>
-    </Compile>
     <Compile Include="ViewControllers\ProcessingViewController.cs" />
     <Compile Include="Views\ImageButton.cs" />
     <Compile Include="Views\TopAlignedImageView.cs" />
-    <Compile Include="..\Shared\Helpers\ListExtensions.cs">
-      <Link>Shared\Helpers\ListExtensions.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Data\Color.cs">
-      <Link>Shared\Data\Color.cs</Link>
-    </Compile>
-    <Compile Include="..\Shared\Data\FileCache.cs">
-      <Link>Shared\Data\FileCache.cs</Link>
-    </Compile>
     <Compile Include="Views\SpinnerCell.cs" />
     <Compile Include="Views\UrlUIImage.cs" />
     <Compile Include="Helpers\UIImageExtensions.cs" />
-    <Compile Include="..\Shared\Models\Country.cs">
-      <Link>Shared\Models\Country.cs</Link>
-    </Compile>
     <Compile Include="Views\TextEntryView.cs" />
     <Compile Include="Views\AutoCompleteTextEntry.cs" />
     <Compile Include="Helpers\UIViewExtensions.cs" />
     <Compile Include="ViewControllers\StringTableViewController.cs" />
   </ItemGroup>
+  <Import Project="..\Shared\XamarinStore.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <BundleResource Include="Resources\Icon-60%402x.png" />
