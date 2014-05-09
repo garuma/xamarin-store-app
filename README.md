@@ -20,7 +20,7 @@ This mobile app is brought to you by your friends at [Xamarin](http://www.xamari
 - Jason Smith <jason.smith@xamarin.com>
 - Ian Leatherbury <ian.leatherbury@xamarin.com>
 - David Hathaway <dave@xamarin.com>
-- Anun Bhatia <anuj@xamarin.com>
+- Anuj Bhatia <anuj@xamarin.com>
 - Brian Keene <brian.keene@xamarin.com>
 - Seth Rosetter <seth.rosetter@xamarin.com>
 - Zack Gramana <zack@xamarin.com>
