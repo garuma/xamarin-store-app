@@ -36,7 +36,7 @@ namespace XamarinStore
 			}
 			return result;
 		}
-
+		public string DeviceType { get; set; }
 		public string SsoToken { get; set; }
 		public string ShippingName { get; set; }
 		public string Email { get; set; }
@@ -50,6 +50,11 @@ namespace XamarinStore
 
 		public string GetJson(User user)
 		{
+			#if __IOS__
+			DeviceType = "iOS";
+			#elif __ANDROID__
+			DeviceType = "Android";
+			#endif
 			ShippingName = string.Format ("{0} {1}",user.FirstName, user.LastName);
 			SsoToken = user.Token;
 			Email = user.Email;
