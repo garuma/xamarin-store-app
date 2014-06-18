@@ -1,20 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinStore.Droid", "XamarinStore.Droid\XamarinStore.Droid.csproj", "{E96837AE-F19A-4467-AE2D-2C4FDCD8A0F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinStore.iOS", "XamarinStore.iOS\XamarinStore.iOS.csproj", "{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{DF3BB782-2483-4149-B8DE-81803CF861B6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{14F0E067-C252-4D65-9BA2-D8C3D4D06910}"
 	ProjectSection(SolutionItems) = preProject
 		build.fsx = build.fsx
-		tools\XamarinHelper.fsx = tools\XamarinHelper.fsx
 		tools\TestFlightHelper.fsx = tools\TestFlightHelper.fsx
+		tools\XamarinHelper.fsx = tools\XamarinHelper.fsx
 	EndProjectSection
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "XamarinStore", "Shared\XamarinStore.shproj", "{83968C8C-485F-4A25-97D3-1CAF8389FAC7}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\XamarinStore.Shared.projitems*{83968c8c-485f-4a25-97d3-1caf8389fac7}*SharedItemsImports = 13
+		Shared\XamarinStore.Shared.projitems*{e96837ae-f19a-4467-ae2d-2c4fdcd8a0f3}*SharedItemsImports = 4
+		Shared\XamarinStore.Shared.projitems*{fc7e7851-4a32-4b43-a9e6-f68ac1ef613e}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -30,28 +37,6 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.AppStore|Any CPU.Build.0 = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.AppStore|iPhone.ActiveCfg = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.AppStore|iPhone.Build.0 = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Release|iPhone.Build.0 = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{DF3BB782-2483-4149-B8DE-81803CF861B6}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{E96837AE-F19A-4467-AE2D-2C4FDCD8A0F3}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
 		{E96837AE-F19A-4467-AE2D-2C4FDCD8A0F3}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
 		{E96837AE-F19A-4467-AE2D-2C4FDCD8A0F3}.Ad-Hoc|Any CPU.Deploy.0 = Debug|Any CPU
@@ -89,13 +74,13 @@ Global
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.AppStore|iPhone.Build.0 = AppStore|iPhone
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|iPhone.Build.0 = Debug|iPhone
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Release|Any CPU.ActiveCfg = Release|iPhone
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Release|Any CPU.Build.0 = Release|iPhone
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Release|iPhone.ActiveCfg = Release|iPhone
@@ -103,7 +88,8 @@ Global
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{FC7E7851-4A32-4B43-A9E6-F68AC1EF613E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = XamarinStore.iOS\XamarinStore.iOS.csproj
@@ -111,21 +97,17 @@ Global
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None
 		$1.ResourceNamePolicy = FileFormatDefault
-		$0.TextStylePolicy = $2
+		$0.TextStylePolicy = $4
 		$2.inheritsSet = null
 		$2.scope = text/x-csharp
 		$0.CSharpFormattingPolicy = $3
 		$3.inheritsSet = Mono
 		$3.inheritsScope = text/x-csharp
 		$3.scope = text/x-csharp
-		$0.TextStylePolicy = $4
 		$4.FileWidth = 120
 		$4.TabsToSpaces = False
 		$4.inheritsSet = VisualStudio
 		$4.inheritsScope = text/plain
 		$4.scope = text/plain
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
