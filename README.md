@@ -1,4 +1,4 @@
-Run a C# app, get a C# shirt
+Run our F# or C# app and get a free t-shirt
 =============
 
 Get a snazzy shirt from the Xamarin Store App in just three simple steps, for free!
@@ -26,3 +26,4 @@ This mobile app is brought to you by your friends at [Xamarin](http://www.xamari
 - Zack Gramana <zack@xamarin.com>
 - Valentin Polushkin <valentin.polushkin@xamarin.com>
 - Jérémie Laval <jeremie.laval@xamarin.com>
+- Michael Ciccotti (F# version) <michael.ciccotti@gmail.com> 
