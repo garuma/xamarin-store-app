@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="200dp">
+    <ImageView
+        android:src="@drawable/blue_shirt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/productImage"
+        android:scaleType="centerCrop" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:text="Men's C# t-shirt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#ffffff"
+            android:paddingRight="8dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:id="@+id/view1"
+            android:background="@drawable/discrete_shadow" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:text="Free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#52abd6"
+            android:paddingRight="16dp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:id="@+id/view1"
+            android:background="@drawable/discrete_shadow" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,4 +1,4 @@
-Run our F# or C# app and get a free t-shirt
+Run an F# app, get an F# shirt
 =============
 
 Get a snazzy shirt from the Xamarin Store App in just three simple steps, for free!
@@ -10,7 +10,7 @@ Get a snazzy shirt from the Xamarin Store App in just three simple steps, for fr
 If you have any questions, give Xamarin a call at +1 (855) 926-2746 or email [hello@xamarin.com](mailto:hello@xamarin.com).
 
 
-These mobile apps are brought to you by your friends at [Xamarin](http://www.xamarin.com/) on an evening hack night.
+This mobile app is brought to you by your friends at [Xamarin](http://www.xamarin.com/) on an evening hack night.
 
 ### Authors:
 - David Siegel <david@xamarin.com>
@@ -20,11 +20,10 @@ These mobile apps are brought to you by your friends at [Xamarin](http://www.xam
 - Jason Smith <jason.smith@xamarin.com>
 - Ian Leatherbury <ian.leatherbury@xamarin.com>
 - David Hathaway <dave@xamarin.com>
-- Anuj Bhatia <anuj@xamarin.com>
+- Anun Bhatia <anuj@xamarin.com>
 - Brian Keene <brian.keene@xamarin.com>
 - Seth Rosetter <seth.rosetter@xamarin.com>
 - Zack Gramana <zack@xamarin.com>
-- Bryan Helms <bryan.helms@xamarin.com> 
 - Valentin Polushkin <valentin.polushkin@xamarin.com>
 - Jérémie Laval <jeremie.laval@xamarin.com>
-- Michael Ciccotti (F# version) <michael.ciccotti@gmail.com> 
+- Michael Ciccotti <michael.ciccotti@gmail.com> (F# version)

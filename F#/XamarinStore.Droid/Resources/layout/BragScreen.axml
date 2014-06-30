@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp">
+    <ImageView
+        android:src="@drawable/complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView1"
+        android:layout_gravity="center" />
+    <TextView
+        android:text="Order Complete"
+        style="@style/XamTitleText" />
+    <TextView
+        android:text="We've received your order and we'll email you as soon as your items ship."
+        style="@style/XamSubtitleText" />
+    <Button
+        style="@style/XamButton"
+        android:text="@string/brag_to_friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bragButton"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

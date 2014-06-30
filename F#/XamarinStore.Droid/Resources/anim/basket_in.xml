@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+  <objectAnimator
+    android:propertyName="scaleY" 
+    android:valueType="floatType"
+    android:valueFrom="0.1"
+    android:valueTo="1"
+    android:duration="@android:integer/config_mediumAnimTime"/>
+  <objectAnimator
+    android:propertyName="scaleX" 
+    android:valueType="floatType"
+    android:valueFrom="0.1"
+    android:valueTo="1"
+    android:duration="@android:integer/config_mediumAnimTime"/>
+  <objectAnimator
+    android:propertyName="translationY"
+    android:valueType="floatType"
+    android:valueFrom="-96dp"
+    android:valueTo="0"
+    android:duration="@android:integer/config_mediumAnimTime"/>
+</set>
