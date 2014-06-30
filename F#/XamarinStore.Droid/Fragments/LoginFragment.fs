@@ -48,7 +48,7 @@ type LoginFragment() =
     member private this.CreateInstructions (inflater:LayoutInflater) container savedInstanceState =
         let view = inflater.Inflate (Resource_Layout.PrefillXamarinAccountInstructions, null)
         let textView = view.FindViewById<TextView> (Resource_Id.codeTextView)
-        let coloredText = Html.FromHtml ("<font color='#48D1CC'>public readonly</font> <font color='#1E90FF'>string</font> XamarinAccountEmail = <font color='Red'>\"...\"</font>;")
+        let coloredText = Html.FromHtml ("<font color='#48D1CC'>let</font> XamarinAccountEmail = <font color='Red'>\"...\"</font>")
         textView.SetText (coloredText, TextView.BufferType.Spannable)
         view
 
