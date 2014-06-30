@@ -122,7 +122,7 @@ type ProductDetailViewController(product: Product, createBasketButton:unit->UIBa
         //Set the animation path
         let pathAnimation = CAKeyFrameAnimation.GetFromKeyPath("position")
         pathAnimation.CalculationMode <- CAAnimation.AnimationPaced.ToString()
-        pathAnimation.FillMode <- CAFillMode.Forwards
+        pathAnimation.FillMode <- CAFillMode.Forwards.ToString()
         pathAnimation.RemovedOnCompletion <- false
         pathAnimation.Duration <- 0.5
 
@@ -134,20 +134,20 @@ type ProductDetailViewController(product: Product, createBasketButton:unit->UIBa
         //Set size change
         let growAnimation = CABasicAnimation.FromKeyPath("bounds.size")
         growAnimation.To <- NSValue.FromSizeF (grow)
-        growAnimation.FillMode <- CAFillMode.Forwards
+        growAnimation.FillMode <- CAFillMode.Forwards.ToString()
         growAnimation.Duration <- 0.1
         growAnimation.RemovedOnCompletion <- false
 
         let shrinkAnimation = CABasicAnimation.FromKeyPath("bounds.size")
         shrinkAnimation.To <- NSValue.FromSizeF (shrink)
-        shrinkAnimation.FillMode <- CAFillMode.Forwards
+        shrinkAnimation.FillMode <- CAFillMode.Forwards.ToString()
         shrinkAnimation.Duration <- 0.4
         shrinkAnimation.RemovedOnCompletion <- false
         shrinkAnimation.BeginTime <- 0.1
 
 
         let animations = new CAAnimationGroup ()
-        animations.FillMode <- CAFillMode.Forwards
+        animations.FillMode <- CAFillMode.Forwards.ToString()
         animations.RemovedOnCompletion <- false
         animations.Animations <- [| pathAnimation; growAnimation; shrinkAnimation|]
         animations.Duration <- 0.5

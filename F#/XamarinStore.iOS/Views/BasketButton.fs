@@ -29,7 +29,7 @@ type BasketButton() as this =
         this.ItemsCount <- count
         let pathAnimation = CAKeyFrameAnimation.GetFromKeyPath("transform")
         pathAnimation.CalculationMode <- CAAnimation.AnimationPaced.ToString()
-        pathAnimation.FillMode <- CAFillMode.Forwards
+        pathAnimation.FillMode <- CAFillMode.Forwards.ToString()
         pathAnimation.TimingFunction <- CAMediaTimingFunction.FromName(CAMediaTimingFunction.EaseOut)
         pathAnimation.Duration <- 0.2
 
