@@ -102,7 +102,13 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
-    <Reference Include="FSharp.Core" />
+    <Reference Include="FSharp.Core"/>
+    <Reference Include="mscorelib">
+	    <HintPath>\Developer\MonoTouch\usr\lib\mono\2.1\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Services" />
     <Reference Include="BTProgressHUD">
