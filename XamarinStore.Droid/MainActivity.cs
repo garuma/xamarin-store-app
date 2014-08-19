@@ -6,6 +6,7 @@ using Android.App;
 using Android.Views;
 using Android.Util;
 using Android.Content.PM;
+using Android.Content;
 
 namespace XamarinStore
 {
@@ -31,6 +32,7 @@ namespace XamarinStore
 				baseFragment = productFragment.Id;
 				SwitchScreens (productFragment, false, true);
 			}
+			ProcessInstructionFromIntent (Intent);
 		}
 
 		protected override void OnSaveInstanceState (Bundle outState)
@@ -65,6 +67,12 @@ namespace XamarinStore
 		{
 			base.OnBackPressed ();
 			SetupActionBar (FragmentManager.BackStackEntryCount != 0);
+		}
+
+		protected override void OnNewIntent (Intent intent)
+		{
+			base.OnNewIntent (intent);
+			ProcessInstructionFromIntent (intent);
 		}
 
 		public int SwitchScreens (Fragment fragment, bool animated = true, bool isRoot = false)
@@ -153,6 +161,32 @@ namespace XamarinStore
 			SetupActionBar ();
 
 			SwitchScreens (new BragFragment (), true, true);
+		}
+
+		async void ProcessInstructionFromIntent (Intent intent)
+		{
+			if (intent == null || !intent.HasExtra ("OrderAction"))
+				return;
+			var query = intent.GetStringExtra ("OrderAction");
+			var id = intent.GetIntExtra ("ProductId", -1);
+
+			try {
+				var products = await WebService.Shared.GetProducts ();
+				var product = products.FirstOrDefault (p => p.Name.GetHashCode () == id);
+				if (product == null)
+					return;
+
+				var order = WebService.Shared.CurrentOrder;
+				if (query == "add")
+					order.Add (product);
+				else {
+					var realProduct = order.Products.FirstOrDefault (p => p.Name == product.Name);
+					if (realProduct != null)
+						WebService.Shared.CurrentOrder.Remove (realProduct);
+				}
+			} catch (Exception e) {
+				Android.Util.Log.Error ("ProcessIntent", e.ToString ());
+			}
 		}
 	}
 }

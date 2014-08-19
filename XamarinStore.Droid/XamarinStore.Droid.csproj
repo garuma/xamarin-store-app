@@ -49,6 +49,18 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.3\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.20.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.20.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="GooglePlayServicesLib">
+      <HintPath>..\packages\Xamarin.GooglePlayServicesJellyBean.19.0.0\lib\MonoAndroid10\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -70,11 +82,13 @@
     <Compile Include="Helpers\MatrixEvaluator.cs" />
     <Compile Include="Fragments\BragFragment.cs" />
     <Compile Include="Views\CircleDrawable.cs" />
+    <Compile Include="WearService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -164,6 +178,8 @@
     <AndroidResource Include="Resources\drawable\btn_bg.xml" />
     <AndroidResource Include="Resources\drawable\btn_bg_inactive.xml" />
     <AndroidResource Include="Resources\drawable\btn_bg_pressed.xml" />
+    <AndroidResource Include="Resources\xml\wearable_app_desc.xml" />
+    <AndroidResource Include="Resources\raw\wearable_app.apk" />
   </ItemGroup>
   <Import Project="..\Shared\XamarinStore.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
@@ -186,4 +202,8 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="Resources\raw\" />
+    <Folder Include="Resources\xml\" />
+  </ItemGroup>
 </Project>
